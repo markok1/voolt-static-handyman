@@ -11,6 +11,12 @@
   }
   position: relative;
 }
+.burger-menu{
+  max-width: 30px;
+  max-height: 30px;
+  display: block;
+  cursor: pointer;
+}
 .nav-buttons {
   display: flex;
   align-items: center;
@@ -49,6 +55,8 @@
 
   transition: transform 0.25s ease-in;
 
+  z-index: 2;
+
   ul {
     display: flex;
     flex-direction: column;
@@ -57,6 +65,9 @@
     a {
       color: #1f2328;
     }
+  }
+  .primary-button{
+    max-width: 100%;
   }
 }
 
@@ -80,6 +91,7 @@
       flex-direction: row;
       justify-content: flex-end;
       margin-right: 10px;
+      gap: 10px;
       li {
         font-size: 12px;
       }
@@ -88,15 +100,21 @@
   .nav-buttons {
     flex-shrink: 0;
   }
+  .burger-menu{
+    display: none;
+  }
 }
 
 @media screen and (min-width: 850px) {
   .logo-box {
     flex-shrink: 0;
   }
-  .nav-menu ul li {
+  .nav-menu ul {
+    gap: 20px;
+     li {
     font-size: 14px;
   }
+}
 }
 
 @media screen and (min-width: 1024px) {

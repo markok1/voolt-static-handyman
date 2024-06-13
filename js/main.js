@@ -1,36 +1,15 @@
 $(document).ready(function () {
   if ($(window).width() < 768) {
-    $(".logo").on("click", function () {
+    $(".burger-menu").on("click", function () {
       $(".nav-menu").addClass("nav-active");
-      $(".logo").hide();
+      $(".burger-menu").hide();
       $(".close-menu").show();
     });
 
     $(".close-menu").on("click", function () {
       $(".nav-menu").removeClass("nav-active");
       $(".close-menu").hide();
-      $(".logo").show();
-    });
-  }
-
-  const scrollers = document.querySelectorAll(".scroller");
-
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
-  }
-
-  function addAnimation() {
-    scrollers.forEach((scroller) => {
-      scroller.setAttribute("data-animated", true);
-
-      const scrollerInner = scroller.querySelector(".scroller__inner");
-      const scrollerContent = Array.from(scrollerInner.children);
-
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        duplicatedItem.setAttribute("aria-hidden", true);
-        scrollerInner.appendChild(duplicatedItem);
-      });
+      $(".burger-menu").show();
     });
   }
 

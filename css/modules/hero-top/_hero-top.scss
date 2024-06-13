@@ -25,12 +25,15 @@
 
   .scroller {
     max-width: 600px;
+    padding: 0px 5px;
   }
 
   .scroller__inner {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    column-gap: 5px;
+    row-gap: 2px;
   }
 
   .scroller[data-animated="true"] {
@@ -82,7 +85,7 @@
   }
 }
 
-@media (min-width: 450px) {
+@media (min-width: 600px) {
   .hero-top {
     display: none;
   }
