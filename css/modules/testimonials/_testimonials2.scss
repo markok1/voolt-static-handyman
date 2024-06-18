@@ -26,7 +26,9 @@
     gap: 2px;
   }
   .testimonial-holder {
-    margin: 0px -4px;
+    // margin: 0px -4px;
+    padding: 0px 16px;
+    max-width: 100%;
     .slick-dots {
       display: flex;
       justify-content: center;
@@ -123,19 +125,19 @@
     .wrapper h2 {
       padding-top: 80px;
     }
-    .testimonial-holder {
-      margin: 0px -10px;
-    }
-    .testimonial {
-      margin: 0px 10px;
-      opacity: 0.5;
-    }
+    // .testimonial-holder {
+    //   margin: 0px -10px;
+    // }
+    // .testimonial {
+    //   margin: 0px 10px;
+    //   opacity: 0.5;
+    // }
 
-    .slick-active {
-      opacity: 0.8;
-    }
-    .slick-center {
-      opacity: 1;
-    }
+    // .slick-active {
+    //   opacity: 0.8;
+    // }
+    // .slick-center {
+    //   opacity: 1;
+    // }
   }
 }

@@ -1159,11 +1159,10 @@ h5 {
 }
 
 .hero-form--thanks {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+  text-align: center;
+}
+.hero-form--thanks > svg {
+  margin-bottom: 20px;
 }
 .hero-form--thanks h3 {
   color: var(--color-neutral-white, #fff);
@@ -1173,6 +1172,7 @@ h5 {
   font-style: normal;
   font-weight: 700;
   line-height: 130%; /* 31.2px */
+  margin-bottom: 20px;
 }
 .hero-form--thanks p {
   color: var(--color-neutral-white, #fff);
@@ -1183,11 +1183,16 @@ h5 {
   font-weight: 400;
   line-height: 24px; /* 150% */
   letter-spacing: 0.16px;
+  margin-bottom: 20px;
+}
+.hero-form--thanks p:last-child {
+  margin-bottom: 0px;
 }
 .hero-form--thanks a {
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   color: var(--color-neutral-white, #fff);
   text-align: center;
@@ -1197,6 +1202,7 @@ h5 {
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: 0.16px;
+  margin-bottom: 20px;
 }
 .hero-form--thanks .primary-button {
   border: 1px solid var(--color-accent, #8dc63f);
@@ -1206,6 +1212,8 @@ h5 {
           backdrop-filter: blur(25px);
   padding: 12px 16px;
   width: unset;
+  margin: auto;
+  margin-bottom: 20px;
 }
 .hero-form--thanks .primary-button:hover {
   color: #fff;
@@ -1659,7 +1667,8 @@ h5 {
   gap: 2px;
 }
 .testimonials2 .testimonial-holder {
-  margin: 0px -4px;
+  padding: 0px 16px;
+  max-width: 100%;
 }
 .testimonials2 .testimonial-holder .slick-dots {
   display: flex;
@@ -1742,19 +1751,6 @@ h5 {
 @media screen and (min-width: 1024px) {
   .testimonials2 .wrapper h2 {
     padding-top: 80px;
-  }
-  .testimonials2 .testimonial-holder {
-    margin: 0px -10px;
-  }
-  .testimonials2 .testimonial {
-    margin: 0px 10px;
-    opacity: 0.5;
-  }
-  .testimonials2 .slick-active {
-    opacity: 0.8;
-  }
-  .testimonials2 .slick-center {
-    opacity: 1;
   }
 }
 .gallery1 {

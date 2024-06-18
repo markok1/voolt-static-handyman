@@ -458,9 +458,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   initForm("#topForm");
   initForm("#bottomForm");
-
+  var currentFormIndex = 0;
   function initForm(formSelector) {
-    var currentFormIndex = 0;
     var totalForms = document.querySelectorAll(formSelector + " .hero-form-content").length;
     var allInformation = "$$";
 
@@ -473,6 +472,14 @@ document.addEventListener("DOMContentLoaded", function () {
         nextForm.style.display = "block";
 
         currentFormIndex++;
+      } else if ((currentFormIndex = totalForms - 1)) {
+        var currentForm = document.querySelectorAll(formSelector + " .hero-form-content")[currentFormIndex];
+        currentForm.style.display = "none";
+
+        currentFormIndex = 0;
+        var nextForm = document.querySelectorAll(formSelector + " .hero-form-content")[0];
+
+        nextForm.style.display = "block";
       }
     }
 
@@ -488,38 +495,44 @@ document.addEventListener("DOMContentLoaded", function () {
         if (currentForm.classList.contains("hero-form-1")) {
           currentForm.querySelectorAll('.option-block .custom-checkbox input[type="checkbox"]').forEach(function (checkbox) {
             if (checkbox.checked) {
-              var checkedText = checkbox.nextElementSibling.textContent.trim();
+              var sibling = checkbox.closest(".custom-checkbox").querySelector(".input-text-span");
+              // var checkedText = checkbox.nextElementSibling.textContent.trim();
+              var checkedText = sibling.textContent.trim();
               checkboxString += checkedText + "\n";
               checkbox.checked = false;
               verifyform = true;
             } else {
-              checkbox.nextElementSibling.classList.add("invalid-input");
-              document.querySelector(formSelector + " .error-msg").style.display = "block";
+              // checkbox.nextElementSibling.classList.add("invalid-input");
+              var sibling = checkbox.closest(".custom-checkbox").querySelector(".checkbox-border");
+              sibling.classList.add("invalid-input");
+              document.querySelector(formSelector + " .hero-form-1 .error-msg").style.display = "block";
             }
           });
 
           if (verifyform) {
             document.querySelectorAll(formSelector + " .checkbox-border").forEach((el) => el.classList.remove("invalid-input"));
-            document.querySelector(formSelector + " .error-msg").style.display = "none";
+            document.querySelector(formSelector + " .hero-form-1 .error-msg").style.display = "none";
             allInformation += formTitle + "\n" + checkboxString;
             showNextForm();
           }
         } else if (currentForm.classList.contains("hero-form-2")) {
           currentForm.querySelectorAll('.option-block .custom-radio input[type="radio"]').forEach(function (radio) {
             if (radio.checked) {
-              var checkedText = radio.nextElementSibling.textContent.trim();
+              var sibling = radio.closest(".custom-radio").querySelector(".input-text-span");
+              var checkedText = sibling.textContent.trim();
               allInformation += "\n" + formTitle + "\n" + checkedText + "\n";
               radio.checked = false;
               verifyform = true;
             } else {
-              radio.nextElementSibling.classList.add("invalid-input");
-              document.querySelector(formSelector + " .error-msg").style.display = "block";
+              var sibling = radio.closest(".custom-radio").querySelector(".radio-border");
+              sibling.classList.add("invalid-input");
+              document.querySelector(formSelector + " .hero-form-2 .error-msg").style.display = "block";
             }
           });
 
           if (verifyform) {
             document.querySelectorAll(formSelector + " .radio-border").forEach((el) => el.classList.remove("invalid-input"));
-            document.querySelector(formSelector + " .error-msg").style.display = "none";
+            document.querySelector(formSelector + " .hero-form-2 .error-msg").style.display = "none";
             showNextForm();
           }
         } else if (currentForm.classList.contains("hero-form-3")) {
@@ -565,7 +578,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(formSelector + " .custom-textarea textarea").value = allInformation;
             showNextForm();
             resetForm(formSelector);
-            submitLead(formData, "form");
+            // submitLead(formData, "form");
           }
         }
       });
@@ -587,8 +600,8 @@ document.addEventListener("DOMContentLoaded", function () {
       button.addEventListener("click", function (e) {
         e.preventDefault();
         document.querySelector(formSelector + " .form-title").classList.remove("hidden-element");
-        document.querySelector(formSelector + " .hero-form-holder").classList.remove("hidden-border");
-        currentFormIndex = -1;
+        // document.querySelector(formSelector + " .hero-form-holder").classList.remove("hidden-border");
+        // currentFormIndex = 0;
         showNextForm();
       });
     });
