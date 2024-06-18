@@ -289,7 +289,9 @@ ul {
     padding: 32px 16px;
     position: relative;
   }
-  .hero-img {
+
+}
+.hero   .hero-img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -297,13 +299,14 @@ ul {
     justify-content: center;
     inset: 0;
     z-index: -1;
-    img,
-    picture {
+
+  }
+  .hero .hero-img  img,  .hero .hero-img  picture {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    &::before {
+    .hero .hero-img  img:before,  .hero .hero-img  picture:before {
       content: "";
       position: absolute;
       inset: 0;
@@ -312,8 +315,6 @@ ul {
       height: 100%;
       background: linear-gradient(90deg, rgba(17, 17, 17, 0.96) 25.55%, rgba(17, 17, 17, 0.48) 99.87%), 50% / cover no-repeat;
     }
-  }
-}
 .hero-content {
   position: relative;
 }
@@ -325,7 +326,9 @@ ul {
   width: 100%;
   max-width: fit-content;
   margin: auto;
-  .benefit {
+
+}
+.benefits-list   .benefit {
     display: flex;
     align-items: flex-start;
     gap: 12px;
@@ -336,14 +339,25 @@ ul {
       flex-shrink: 0;
     }
   }
-}
+  .benefits-list .benefit  p {
+      color: var(--color-neutral-white, #fff);
+    }
+   
+    .benefits-list .benefit   svg {
+      flex-shrink: 0;
+    }
+  
+
 
 .hero-title {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-bottom: 32px;
-  h1 {
+
+
+}
+.hero-title  h1 {
     color: #fff;
     text-align: center;
     span {
@@ -351,11 +365,10 @@ ul {
       background: #fff;
     }
   }
-  p {
+  .hero-title   p {
     color: #fff;
     text-align: center;
   }
-}
 
 .discount-box {
   max-width: 200px;
