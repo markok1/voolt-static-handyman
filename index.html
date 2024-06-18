@@ -74,6 +74,84 @@ ul {
   margin: 0;
   list-style-type: none;
 }
+/* primary */
+.primary-button {
+  display: flex;
+  padding: 12px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 4px;
+  background: #1485db;
+
+  max-width: 358px;
+  width: 100%;
+
+  transition: all 0.25s ease-in;
+
+  cursor: pointer;
+
+  color: #fff;
+
+  border: 1px solid transparent;
+}
+.primary-button:hover {
+    background: #fff;
+    color: #1485db;
+    border: 1px solid #1485db;
+    transition: all 0.25s ease-in;
+  }
+
+.secondary-button {
+  display: flex;
+  padding: 12px 12px;
+
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  max-width: 358px;
+  width: 100%;
+
+  border-radius: 4px;
+  border: 1px solid #1485db;
+  background: #fff;
+
+  color: #1485db;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease-in;
+
+}
+.secondary-button:hover {
+    color: #fff;
+    background: #1485db;
+    transition: all 0.25s ease-in;
+  }
+
+  .secondary-button:hover svg path{
+
+        fill: #fff;
+      
+    }
+
+
+.nav-btn-padding {
+  padding: 6px 12px;
+  max-width: unset;
+  width: unset;
+
+}
+.nav-btn-padding:hover svg path{
+
+        fill: #1485db;
+        transition: all 0.25s ease-in;
+      }
+
+
+
 
       /* navbar */
       .nav {
@@ -487,6 +565,31 @@ ul {
     padding: 100px 16px;
   }
 }
+
+/* stick */
+
+.sticky-bottom {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  z-index: 10;
+  padding: 12px 16px;
+  border-top: 1px solid var(--color-pallete-main-pallete-neutralExtraLight, #d9dbdd);
+  background: #1485db;
+}
+.sticky-bottom   a {
+    margin: auto;
+  }
+
+@media screen and (min-width: 600px) {
+  .sticky-bottom {
+    display: none;
+  }
+}
+
+
+
 
     </style>
 
