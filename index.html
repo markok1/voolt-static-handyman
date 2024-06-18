@@ -233,19 +233,20 @@ ul {
 .hero-top {
   background: #1485db;
   padding: 4px 0px;
-  p:first-child {
+}
+.hero-top p:first-child {
     color: #fff;
     text-align: center;
     margin-bottom: 4px;
   }
 
-  .tag-list {
+  .hero-top .tag-list {
     margin: 0;
     padding-inline: 0;
     list-style: none;
   }
 
-  .tag-list li {
+  .hero-top .tag-list li {
     background: transparent;
     transition: 300ms;
     cursor: pointer;
@@ -255,12 +256,12 @@ ul {
     gap: 2px;
   }
 
-  .scroller {
+  .hero-top .scroller {
     max-width: 600px;
     padding: 0px 5px;
   }
 
-  .scroller__inner {
+  .hero-top .scroller__inner {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -269,13 +270,13 @@ ul {
   }
 
 
-  li:hover,
-  li:focus,
-  li:active {
+  .hero-top li:hover,
+  .hero-top li:focus,
+  .hero-top li:active {
     transform: scale(1.1);
     filter: saturate(3);
   }
-}
+
 
 @media (min-width: 600px) {
   .hero-top {
@@ -331,13 +332,14 @@ ul {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    p {
+
+  }
+  .benefits-list .benefit     p {
       color: var(--color-neutral-white, #fff);
     }
-    svg {
+    .benefits-list .benefit   svg {
       flex-shrink: 0;
     }
-  }
   .benefits-list .benefit  p {
       color: var(--color-neutral-white, #fff);
     }
@@ -390,10 +392,10 @@ ul {
 .discount-content {
   text-align: center;
   color: #fff;
-  svg {
+}
+.discount-content   svg {
     position: absolute;
   }
-}
 .svg-top {
   top: 6px;
   left: 7px;
@@ -414,15 +416,15 @@ ul {
   justify-content: center;
 
   gap: 10px;
-  p {
+}
+.hero-stars-and-reviews   p {
     color: var(--color-neutral-white, #fff);
   }
-  .stars {
+  .hero-stars-and-reviews  .stars {
     display: flex;
     align-items: center;
     gap: 2px;
   }
-}
 
 .devider {
   width: 1px;
