@@ -120,53 +120,86 @@
 //   })(jQuery);
 // });
 
-$(document).ready(function () {
-  if ($(window).width() < 768) {
-    $(".burger-menu").on("click", function () {
-      $(".nav-menu").addClass("nav-active");
-      $(".burger-menu").hide();
-      $(".close-menu").show();
+// function setTestimonialHeight() {
+//   var maxHeight = 0;
+//   $(".testimonial").each(function () {
+//     maxHeight = Math.max(maxHeight, $(this).height());
+//   });
+//   $(".testimonial").height(maxHeight);
+// }
+
+// // Initial setup
+// setTestimonialHeight();
+
+// // Resize event handler
+// $(window).resize(function () {
+//   setTestimonialHeight();
+// });
+
+// $(document).ready(function () {
+//   if ($(window).width() < 768) {
+//     $(".burger-menu").on("click", function () {
+//       $(".nav-menu").addClass("nav-active");
+//       $(".burger-menu").css("display", "none");
+//       $(".close-menu").css("display", "block");
+//     });
+
+//     $(".close-menu").on("click", function () {
+//       $(".nav-menu").removeClass("nav-active");
+//       $(".burger-menu").css("display", "block");
+//       $(".close-menu").css("display", "none");
+//     });
+//   }
+
+//   //faq
+//   $(".qa-item").click(function (e) {
+//     e.preventDefault();
+//     if ($(this).hasClass("opened")) {
+//       $(this).removeClass("opened");
+//       $(this).find(".answer").css("max-height", "0px");
+//     } else {
+//       $(".qa-item").removeClass("opened");
+//       $(".qa-item").find(".answer").css("max-height", "0px");
+//       $(this).addClass("opened");
+//       var heightinside = $(this).find(".answer p").height() + 50;
+//       $(this)
+//         .find(".answer")
+//         .css("max-height", heightinside + "px");
+//     }
+//   });
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth < 768) {
+    document.querySelector(".burger-menu").addEventListener("click", function () {
+      document.querySelector(".nav-menu").classList.add("nav-active");
+      document.querySelector(".burger-menu").style.display = "none";
+      document.querySelector(".close-menu").style.display = "block";
     });
 
-    $(".close-menu").on("click", function () {
-      $(".nav-menu").removeClass("nav-active");
-      $(".close-menu").hide();
-      $(".burger-menu").show();
+    document.querySelector(".close-menu").addEventListener("click", function () {
+      document.querySelector(".nav-menu").classList.remove("nav-active");
+      document.querySelector(".burger-menu").style.display = "block";
+      document.querySelector(".close-menu").style.display = "none";
     });
   }
-
-  function setTestimonialHeight() {
-    var maxHeight = 0;
-    $(".testimonial").each(function () {
-      maxHeight = Math.max(maxHeight, $(this).height());
-    });
-    $(".testimonial").height(maxHeight);
-  }
-
-  // Initial setup
-  setTestimonialHeight();
-
-  // Resize event handler
-  $(window).resize(function () {
-    setTestimonialHeight();
-  });
 
   //faq
-  (function ($) {
-    let section = $("section.faq-js");
-    if (section.length) {
-      $(".qa-item").click(function (e) {
-        e.preventDefault();
-        if ($(this).hasClass("opened")) {
-          $(this).removeClass("opened");
-          $(this).find(".answer").slideUp(150);
-        } else {
-          $(".qa-item").removeClass("opened");
-          $(".qa-item .answer").slideUp(150);
-          $(this).addClass("opened");
-          $(this).find(".answer").slideDown(150);
-        }
-      });
-    }
-  })(jQuery);
+  document.querySelectorAll(".qa-item").forEach(function (item) {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (item.classList.contains("opened")) {
+        item.classList.remove("opened");
+        item.querySelector(".answer").style.maxHeight = "0px";
+      } else {
+        document.querySelectorAll(".qa-item").forEach(function (qa) {
+          qa.classList.remove("opened");
+          qa.querySelector(".answer").style.maxHeight = "0px";
+        });
+        item.classList.add("opened");
+        var heightinside = item.querySelector(".answer p").offsetHeight + 50;
+        item.querySelector(".answer").style.maxHeight = heightinside + "px";
+      }
+    });
+  });
 });

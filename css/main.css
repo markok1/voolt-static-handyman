@@ -1967,7 +1967,6 @@ h5 {
   display: flex;
   padding: var(--padding-16, 16px) var(--padding-12, 12px) var(--padding-16, 16px) var(--padding-16, 16px);
   flex-direction: column;
-  gap: var(--spacing-12, 12px);
 }
 .faq1 .questions .qa-item.opened .rotateSvg {
   transform: rotate(180deg);
@@ -1990,7 +1989,12 @@ h5 {
   transition: all 0.25s ease;
 }
 .faq1 .questions .qa-item .answer {
-  display: none;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.25s ease-in;
+}
+.faq1 .questions .qa-item .answer p {
+  padding-top: 12px;
 }
 .faq1 .bottom-boxes {
   padding: 0px 16px;
