@@ -1667,7 +1667,6 @@ h5 {
   gap: 2px;
 }
 .testimonials2 .testimonial-holder {
-  padding: 0px 16px;
   max-width: 100%;
 }
 .testimonials2 .testimonial-holder .slick-dots {
@@ -1691,7 +1690,7 @@ h5 {
   transition: all 0.25s ease-in;
 }
 .testimonials2 .testimonial {
-  margin: 0px 4px;
+  margin: 0px 10px;
   display: flex;
   padding: var(--padding-20, 20px) var(--padding-16, 16px);
   flex-direction: column;
@@ -1726,6 +1725,10 @@ h5 {
 }
 .testimonials2 .bottom-boxes {
   padding: 0px 16px;
+}
+
+.glider-dot.active {
+  background: #1485db;
 }
 
 .testimonials2--lightbg {
@@ -1813,7 +1816,8 @@ h5 {
   margin-bottom: 12px;
 }
 .gallery1 .single-slider .big-image {
-  height: 358px;
+  height: 280px !important;
+  margin: 0px 10px;
 }
 .gallery1 .single-slider .big-image img {
   height: 100%;
@@ -1840,9 +1844,35 @@ h5 {
   padding: 0px 16px;
 }
 
+.glider-next {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glider-prev {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (min-width: 768px) {
   .gallery1 .single-slider .big-image {
-    height: 450px;
+    height: 280px !important;
   }
   .gallery1 .single-slider .big-image:nth-child(3) img {
     -o-object-position: top;

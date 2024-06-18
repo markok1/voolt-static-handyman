@@ -27,7 +27,7 @@
   }
   .testimonial-holder {
     // margin: 0px -4px;
-    padding: 0px 16px;
+    //padding: 0px 16px;
     max-width: 100%;
     .slick-dots {
       display: flex;
@@ -53,7 +53,7 @@
     }
   }
   .testimonial {
-    margin: 0px 4px;
+    margin: 0px 10px;
     display: flex;
     padding: var(--padding-20, 20px) var(--padding-16, 16px);
     flex-direction: column;
@@ -92,6 +92,9 @@
   .bottom-boxes {
     padding: 0px 16px;
   }
+}
+.glider-dot.active {
+  background: #1485db;
 }
 // light gray bg and it changes slick circle color
 .testimonials2--lightbg {

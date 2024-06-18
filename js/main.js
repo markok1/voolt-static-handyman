@@ -225,15 +225,56 @@ document.addEventListener("DOMContentLoaded", function () {
           slidesToScroll: 1,
         },
       },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToScroll: 1,
+          slidesToShow: 3,
+        },
+      },
     ],
   });
 
   new Glider(document.querySelector(".single-slider"), {
     slidesToScroll: 1,
-    slidesToShow: 3,
+    slidesToShow: 4,
     draggable: true,
     scrollLock: true,
 
-    dots: ".dots",
+    arrows: {
+      prev: "#main-prev",
+      next: "#main-next",
+    },
+
+    responsive: [
+      {
+        breakpoint: 0,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToScroll: 1,
+          slidesToShow: 4,
+        },
+      },
+    ],
   });
 });

@@ -58,7 +58,8 @@
   .single-slider {
     margin-bottom: 12px;
     .big-image {
-      height: 358px;
+      height: 280px !important;
+      margin: 0px 10px;
       img {
         height: 100%;
         width: 100%;
@@ -85,11 +86,35 @@
     padding: 0px 16px;
   }
 }
+.glider-next {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glider-prev {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media screen and (min-width: 768px) {
   .gallery1 {
     .single-slider .big-image {
-      height: 450px;
+      height: 280px !important;
       // nth child is used to fix image position because with object-position:center (default) dog wasn't in the focus / use it to position the content properly
       // you can remove it or use it to adjust future images, start's here:
       &:nth-child(3) {
