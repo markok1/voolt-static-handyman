@@ -202,4 +202,38 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  new Glider(document.querySelector(".testimonial-holder"), {
+    slidesToScroll: 1,
+    slidesToShow: 3,
+    draggable: true,
+    scrollLock: true,
+    rewind: true,
+    dots: ".dots",
+    responsive: [
+      {
+        breakpoint: 0,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+  new Glider(document.querySelector(".single-slider"), {
+    slidesToScroll: 1,
+    slidesToShow: 3,
+    draggable: true,
+    scrollLock: true,
+
+    dots: ".dots",
+  });
 });
