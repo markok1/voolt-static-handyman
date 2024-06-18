@@ -1846,7 +1846,7 @@ h5 {
 
 .glider-next {
   top: 50%;
-  right: 20px;
+  right: 10px;
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
@@ -1855,11 +1855,12 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--color-pallette-neutralGreyLight, rgba(17, 17, 17, 0.07));
 }
 
 .glider-prev {
   top: 50%;
-  left: 20px;
+  left: 10px;
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
@@ -1868,6 +1869,7 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--color-pallette-neutralGreyLight, rgba(17, 17, 17, 0.07));
 }
 
 @media screen and (min-width: 768px) {
@@ -1902,6 +1904,18 @@ h5 {
   }
   .gallery1 .primary-button {
     max-width: 230px;
+  }
+  .gallery1 .glider-next {
+    width: 48px;
+    height: 48px;
+    right: 0px;
+    border: 1px solid var(--color-pallette-neutralGreyLight, rgba(17, 17, 17, 0.07));
+  }
+  .gallery1 .glider-prev {
+    width: 48px;
+    height: 48px;
+    left: 0px;
+    border: 1px solid var(--color-pallette-neutralGreyLight, rgba(17, 17, 17, 0.07));
   }
 }
 @media screen and (min-width: 1024px) {
