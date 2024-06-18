@@ -1885,9 +1885,6 @@ h5 {
   .gallery1 .wrapper {
     gap: 40px;
   }
-  .gallery1 .single-slider {
-    display: none;
-  }
   .gallery1 .bottom-slider {
     margin-bottom: 20px;
   }

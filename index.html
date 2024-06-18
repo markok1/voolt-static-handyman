@@ -24,15 +24,16 @@
     <link rel="preload" href="img/hero-bg.webp" as="image" media="(min-width: 768px)" />
     <link rel="preload" href="img/hero-bg-mobile.webp" as="image" media="(max-width: 768px)" />
 
-    <link rel="stylesheet" href="css/main.css" />
-
     <!-- <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script> -->
     <!-- slick slider start -->
     <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
     <!-- slick slider end -->
-   
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -49,7 +50,6 @@
       <div class="wrapper">
         <div class="logo-box">
           <img src="img/logo.webp" alt="Logo" class="logo" />
-
         </div>
         <div class="nav-menu">
           <ul>
@@ -73,7 +73,7 @@
             </svg>
           </a>
           <div>
-            <img class="burger-menu" src="img/burger-menu.svg" alt="burger menu">
+            <img class="burger-menu" src="img/burger-menu.svg" alt="burger menu" />
             <svg class="close-menu" xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
               <path d="M24 8.31738L8 24.3174M8 8.31738L24 24.3174" stroke="#1F2328" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -1083,6 +1083,9 @@
             </div>
           </div>
         </div>
+
+        <div role="tablist" class="dots"></div>
+
         <div class="bottom-boxes">
           <div class="bottom-buttons">
             <a class="primary-button base-l--bold" href="#topForm">Book Your Handyman Now</a>
@@ -1142,7 +1145,7 @@
               <img loading="lazy" src="img/6.webp" alt="Gallery Images" />
             </div>
           </div>
-          <div class="bottom-slider">
+          <!-- <div class="bottom-slider">
             <div class="small-image">
               <img loading="lazy" src="img/1.webp" alt="Gallery Images" />
             </div>
@@ -1161,7 +1164,7 @@
             <div class="small-image">
               <img loading="lazy" src="img/6.webp" alt="Gallery Images" />
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="bottom-boxes">
           <div class="bottom-buttons">
@@ -1790,7 +1793,27 @@
       </div>
     </footer>
 
-    <!-- <script defer src="js/main-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <!-- <script defer src="js/main.js"></script>
     <script defer src="js/hero-form-min.js"></script> -->
+    <script>
+      new Glider(document.querySelector(".testimonial-holder"), {
+        slidesToScroll: 1,
+        slidesToShow: 3,
+        draggable: true,
+        scrollLock: true,
+
+        dots: ".dots",
+      });
+
+      new Glider(document.querySelector(".single-slider"), {
+        slidesToScroll: 1,
+        slidesToShow: 3,
+        draggable: true,
+        scrollLock: true,
+
+        dots: ".dots",
+      });
+    </script>
   </body>
 </html>
